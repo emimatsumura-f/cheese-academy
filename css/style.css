@@ -1,0 +1,349 @@
+
+/*全体　共通
+最初から設定してあるので特に変更
+しなくても大丈夫です♪
+-----------------*/
+body{
+	font-family: Roboto, "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+	line-height: 1.75;
+	font-size: 16px;
+}
+
+
+/*　パディングをサイズ内側にする処理　*/
+* {
+	padding:0;
+	margin:0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*ーーーーーーーーーーー*/
+/*この下から記述*/
+/*ーーーーーーーーーーー*/
+
+
+.container{
+	width: 90%;
+	max-width: 960px;
+	margin: 5px auto;
+	position: relative;
+}
+
+.flex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+/* header */
+.header_menu li {
+    margin-left: 20px;
+}
+
+.header_menu li a:hover {
+    color: #80ba4a;
+    transition: .3s;
+}
+
+.header_menu li a {
+	color: #000000;
+    transition: .3s;
+}
+
+/* mein */
+
+#hero {
+	background-image: url(../img/hero.jpeg);
+	background-position: center;
+	background-size: cover;
+	height: 650px;
+	border-radius: 30px;
+	display: flex;
+	align-items: flex-end;
+	overflow: hidden;
+	margin-bottom: 100px;
+}
+
+#hero::before {
+	width: 100%;
+	height: 100%;
+	background-color: #000000;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0.2;
+	z-index: 1;
+}
+
+.hero_inner {
+	z-index: 2;
+	color: #ffffff;
+	width: 100%;
+	text-align: center;
+}
+
+.hero_inner h1 {
+	font-size: 30px;
+}
+
+#ABOUT {
+	margin-bottom: 100px;
+}
+
+h3 {
+	line-height: 1.2;
+}
+/* INTRODUCTION */
+.title {
+	color: #80ba4a;
+}
+
+.title-photo {
+	color: #80ba4a;
+	margin-bottom: 40px;
+}
+
+.text-1{
+	line-height: 1.1;
+}
+
+#INTRODUCTION {
+	margin-bottom: 100px;
+}
+
+.title {
+	margin-bottom: 25px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.columu-2 {
+    width: 250%;
+}
+
+
+.INTRODUCTION-img1 {
+    background-image: url(../img/basukua.JPG);
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+    border-radius: 20px;
+}
+
+.INTRODUCTION-img2 {
+    background-image: url(../img/andy.JPG);
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+    border-radius: 20px;
+}
+
+.INTRODUCTION-img3 {
+    background-image: url(../img/pikaso.JPG);
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+    border-radius: 20px;
+}
+
+.INTRODUCTION-img4 {
+    background-image: url(../img/mukouda.jpeg);
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+    border-radius: 20px;
+}
+
+.text {
+    margin: 0;
+    padding: 0 5%; /* 左右に幅の5%の余白を追加 */
+}
+
+/* photo */
+#PHOTO {
+	margin-bottom: 100px;
+}
+.slider-container {
+	width: 1000px; /* コンテナの幅を固定 */
+	margin: 0 auto; /* 中央寄せ */
+	overflow: hidden;
+	position: relative;
+	
+	padding: 20px 0;
+}
+
+/* スライダーのスタイル */
+.slider {
+	display: flex;
+	width: calc(200px * 10); /* 画像5枚分の2倍 */
+	animation: slide 20s linear infinite;
+}
+
+/* 画像のスタイル */
+.slider img {
+	width: 300px;
+	height: 400px;
+	object-fit: cover;
+	padding: 0 5px; /* 画像間の間隔 */
+}
+
+/* スライドアニメーション */
+@keyframes slide {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(calc(-200px * 5)); /* 画像5枚分の距離 */
+	}
+}
+/* ACCESS */
+#ACCESS {
+	background-color: #fafafa;
+} 
+
+#ACCESS .wrapper {
+	padding-top: 64px;
+	padding-bottom: 80px;
+}
+
+#ACCESS dl {
+	width: 480px;
+	margin: auto;
+	margin-top: 64px;
+	margin-bottom: 80px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#ACCESS dl dt {
+	width: 118px;
+	text-align-last: left;
+	margin-bottom: 24px;
+}
+#ACCESS dl dd {
+	margin-left: 48px;
+	width: 314px;
+	text-align: left;
+}
+
+#CONTACT .wrapper {
+	padding: 64px;
+	
+}
+
+.sub-title {
+    text-align: center;
+}
+
+#CONTACT p {
+	margin-bottom: 32px;
+}
+
+form {
+	width: 630px;
+	margin: 80px auto;
+	margin-top: 80px;
+}
+
+form dl {
+	display: flex;
+	flex-wrap: wrap;
+	text-align: left;
+}
+
+form dl dt {
+	width: 118px;
+	margin-bottom: 24px;
+}
+
+form dl dd {
+	width: 512px;
+}
+
+form dl dd input, form dl dd textarea {
+	margin-left: 120px;
+	border: #bfbfbf 1px solid;
+	width: 328px;
+	height: 36px;
+}
+
+form dl dd textarea {
+	height: 108px;
+}
+
+form .radio-button {
+	font-size: 14px;
+	margin-bottom: 32px;
+}
+
+form .radio-button .checkbox {
+	margin-right: 40px;
+}
+
+form .radio-button input {
+	width: 24px;
+	height: 24px;
+}
+
+.submit-button {
+    background-color: #80ba4a; /* 緑色の背景 */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display:block;
+	text-align: center;
+    font-size: 16px;
+    margin: 20px auto;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #45a049; /* ホバー時の色 */
+}
+
+
+/* footer */
+footer{
+	font-size: 12px;
+	padding: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+footer small{
+	text-align: center;
+	margin: 20px;
+}
+
+/*
+---------------------*/
+
+
+
+/*
+---------------------*/
+
+
+
+/*
+---------------------*/
+
+
+
+/*
+---------------------*/
